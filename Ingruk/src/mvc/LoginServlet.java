@@ -6,7 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/Login.do")
 public class LoginServlet extends HttpServlet {
@@ -25,7 +25,9 @@ public class LoginServlet extends HttpServlet {
 	}//Get END
 
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response, HttpSession session) throws ServletException, IOException {
+		String Uid = request.getParameter("userid");
+		String Upwd = request.getParameter("userpwd");
 		
 		
 	}//PostEND

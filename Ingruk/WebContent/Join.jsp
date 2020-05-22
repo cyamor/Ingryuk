@@ -34,7 +34,7 @@
 
 
 <body>
-	<div class="container-xl" >
+	<div class="container-xl contents" >
 		<div class="form-row register" style="padding: 1rem; margin-bottom:2rem;">잉력시장 회원가입</div>
 		<p>
 		<form name="myform" method="post" action="Join.do">
