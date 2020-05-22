@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+<meta charset="UTF-8">
+<title>Ingruk-market Header</title>
+</head>
+
+
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="http://malsup.github.com/jquery.cycle2.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+/* .nav {
+	margin-top: 0.5rem;
+	padding: 0.3rem;
+}
+
+.nav-item {
+	text-align: center;
+	height: 2rem;
+	vertical-align: middle;
+} */
+</style>
+<script type="text/javascript">
+	$(window).ready(function() {
+		var sessionCK = "${userId}";
+		if (sessionCK == "" || sessionCK == "null" || sessionCK == null) {
+			$(document).ready(function() {
+				$('.user_out').show()
+				$('.user_in').hide()
+			});
+		} else {
+			$(document).ready(function() {
+				$('.user_out').hide()
+				$('.user_in').show()
+			});
+		}
+	});
+</script>
+<body>
+
+	<div id="header" clas="container-float">
+		<ul class="user_out">
+			<li class="sign in"><a class="text-secondary" href="Join.do">
+					<i class="fa fa-arrow-right" aria-hidden="true"> 회원가입</i>
+			</a></li>
+			<li class="login"><a class="text-secondary" href="Login.do">
+					<i class="fa fa-sign-in" aria-hidden="true"> 로그인</i>
+			</a></li>
+		</ul>
+		<ul class="user_in">
+			<li class="membership"><a class="text-secondary"
+				href="my_page.do"> <i class="fa fa-user-circle-o"
+					aria-hidden="true"> 마이페이지</i>
+			</a></li>
+			<li class="logout"><a class="text-secondary" href="logout.do">
+					<i class="fa fa-share" aria-hidden="true"> 로그아웃</i>
+			</a></li>
+		</ul>
+	</div>
+
+
+
+
+</body>
+</html>
